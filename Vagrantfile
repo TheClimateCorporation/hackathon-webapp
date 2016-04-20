@@ -1,11 +1,11 @@
 Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
-  config.vm.hostname = "hackillinois"
+  config.vm.hostname = "climate-hackathon"
 
   config.vm.network "forwarded_port", host: 18888, guest: 18888
 
   config.vm.provider "virtualbox" do |vb|
-    vb.name = "hackillinois"
+    vb.name = "climate-hackathon"
     vb.customize ["modifyvm", :id, "--memory", "2048"]
   end
 
